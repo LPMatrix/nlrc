@@ -456,9 +456,9 @@ span.is-active:after {
   padding: 40px 40px;
 }
 .next-draw-content {
-  -ms-flex: 0 0 40%;
-  flex: 0 0 40%;
-  max-width: 40%;
+  -ms-flex: 0 0 60%;
+  flex: 0 0 60%;
+  max-width: 60%;
 }
 .next-draw-content p {
   color: #ffffff;
