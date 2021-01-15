@@ -1747,7 +1747,7 @@ span.is-active:after {
   bottom: -45px;
 }
 .winner-single-item .thumb {
-  max-height: 170px;
+  /*max-height: 170px;*/
   overflow: hidden;
 }
 .winner-single-item .content {

@@ -70,21 +70,28 @@
   </section>
   <!-- breadcrumb-area end -->
 
+  <div class="col-lg-12" x-show="nousers">
+    <div class="choose-single-item">
+      <i class="flaticon-bonus"></i>
+      <h4 class="title text-center"> No winner found.</h4>
+    </div>
+  </div>
+
   <!-- winner-section start -->
-  <section class="winner-section section-padding">
+  <section class="winner-section section-padding mt-n5">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-6">
           <div class="section-header text-center">
-            <h2 class="section-title">lottery winner</h2>
+            <!-- <h2 class="section-title">lottery winner</h2> -->
           </div>
         </div>
       </div>
       <div class="row mt-mb-15">
         <template x-for="item in filteredEmployees" :key="item">
-        <div class="col-xl-3 col-md-4 col-sm-6">
+        <div class="col-md-4 offset-md-4">
           <div class="winner-single-item">
-            <div class="thumb">
+            <div class="thumb" style="height: 20em;">
               <img :src="`${item.profile_image}`" alt="winner-image" class="w-100">
             </div>
             <div class="content">
@@ -185,17 +192,18 @@
         return {
           myForData: sourceData,
           result: [],
+          nousers: false,
           get filteredEmployees() {
+            if (this.result.length == 0) {nousers = false}
             return this.result;
           },
           search(){
             query = document.querySelector('#query').value,
-            console.log(query)
             this.result = this.myForData.filter((item) => {
-              // console.log(this.query)
               return item.nin === query;
                 
             });
+            if (this.result.length == 0) {this.nousers = true}else{this.nousers = false}
           }
         };
       }
