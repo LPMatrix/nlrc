@@ -5,8 +5,8 @@
 }
 .cmn-btn {
   padding: 16px 15px;
-  background-color: var(--main-color);
-  border: 1px solid var(--main-color);
+  background-color: #86c127;
+  border: 1px solid #86c127;
   color: #ffffff;
   font-size: 18px;
   font-weight: 500;
@@ -16,8 +16,8 @@
   -moz-border-radius: 999px;
   -ms-border-radius: 999px;
   -o-border-radius: 999px;
-  -webkit-box-shadow: 0px 7px 15px 0px rgba(238, 0, 95, 0.3);
-  box-shadow: 0px 7px 15px 0px rgba(238, 0, 95, 0.3);
+  -webkit-box-shadow: 0px 7px 15px 0px #86c127;
+  box-shadow: 0px 7px 15px 0px #86c127;
   transition: all 0.3s;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
@@ -32,8 +32,8 @@
   -moz-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
   -o-transform: translateY(-2px);
-  -webkit-box-shadow: 0px 7px 15px 0px rgba(56, 44, 48, 0.3);
-  box-shadow: 0px 7px 15px 0px rgba(56, 44, 48, 0.3);
+  -webkit-box-shadow: 0px 7px 15px 0px #86c127;
+  box-shadow: 0px 7px 15px 0px #86c127;
 }
 .border-btn {
   padding: 16px 15px;

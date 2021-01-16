@@ -33,8 +33,8 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav main-menu ml-auto">
-              <li class="active"><a href="index.html">Home</a></li>
-              <li><a href="detail.html">Verify</a></li>
+              <li><a href="index.html">Home</a></li>
+              <li class="active"><a href="detail.html">Verify</a></li>
             </ul>
             <a class="site-logo site-title ml-3" href="index.html"><img src="assets/images/Seal_of_the_President_of_Nigeria.png" alt="site-logo"></a>
           </div>
@@ -91,9 +91,6 @@
         <template x-for="item in filteredEmployees" :key="item">
         <div class="col-md-4 offset-md-4">
           <div class="winner-single-item">
-            <div class="thumb" style="height: 20em;">
-              <img :src="`${item.profile_image}`" alt="winner-image" class="w-100">
-            </div>
             <div class="content">
               <h4 class="name"><a href="#" x-text="item.employee_name"></a></h4>
               <p>NIN:<span class="draw-name" x-text="item.nin"></span></p>
@@ -101,6 +98,10 @@
               <p>Won: <span class="amount" x-text="'N'+item.amount"></span></p>
               <p>NOK: <span class="amount" x-text="item.nok"></span></p>
               <p>Lottery: <span class="amount" x-text="item.lottery"></span></p>
+              <p>Claim status:<span class="amount" x-text="item.status"></span></p>
+              <p>Year won:<span class="amount" x-text="item.year_won"></span></p>
+              <p>Year claimed:<span class="amount" x-text="item.year_claimed"></span></p>
+              <p>Location:<span class="amount" x-text="item.location"></span></p>
             </div>
           </div>
         </div><!-- winner-single-item end -->
@@ -207,127 +208,171 @@
           }
         };
       }
-       // name, dob, address, NIN, Next of Kin, amount won, name of lottery they won from eg bet9ja
+       // Name
+      // DOB
+      // NIN
+      // Location-as in state
+      // NOK name. Surname and first name initial
+      // Amount won-
+      // Claim status
+      // Year won
+      // Year claimed
       var sourceData = [
         {
           id: "1",
           employee_name: "Tiger Nixon",
           dob: "02-04-1990",
           nin: "6112345778",
-          nok: "Tiger Winters",
+          nok: "Tiger W",
           amount: "200000",
           lottery: "Bet9ja",
-          profile_image: "https://randomuser.me/api/portraits/men/1.jpg",
+          location: "Kwara",
+          status: "Claimed",
+          year_won: "2020",
+          year_claimed: "2020",
         },
         {
           id: "2",
           employee_name: "Garrett Winters",
           dob: "02-04-1990",
           nin: "63086654356",
-          nok: "Tiger Winters",
+          nok: "Tiger K",
           amount: "200000",
           lottery: "Bet9ja",
-          profile_image: "https://randomuser.me/api/portraits/men/2.jpg",
+          location: "Kaduna",
+          status: "Claimed",
+          year_won: "2020",
+          year_claimed: "2021",
         },
         {
           id: "3",
           employee_name: "Ashton Cox",
           dob: "02-04-1990",
           nin: "6645798732",
-          nok: "Tiger Winters",
+          nok: "Tiger J",
           amount: "200000",
           lottery: "Bet9ja",
-          profile_image: "https://randomuser.me/api/portraits/men/3.jpg",
+          location: "Oyo",
+          status: "Claimed",
+          year_won: "2020",
+          year_claimed: "2020",
         },
         {
           id: "4",
           employee_name: "Cedric Kelly",
           dob: "02-04-1990",
           nin: "2298765432",
-          nok: "Tiger Winters",
+          nok: "Tiger I",
           amount: "200000",
           lottery: "Bet9ja",
-          profile_image: "https://randomuser.me/api/portraits/men/4.jpg",
+          location: "katsina",
+          status: "Claimed",
+          year_won: "2020",
+          year_claimed: "2020",
         },
         {
           id: "5",
           employee_name: "Airi Satou",
           dob: "02-04-1990",
           nin: "334567890",
-          nok: "Tiger Winters",
+          nok: "Tiger H",
           amount: "200000",
           lottery: "Bet9ja",
-          profile_image: "https://randomuser.me/api/portraits/women/5.jpg",
+          location: "Kano",
+          status: "Claimed",
+          year_won: "2020",
+          year_claimed: "2020",
         },
         {
           id: "6",
           employee_name: "Brielle Williamson",
           dob: "02-04-1990",
           nin: "612345678",
-          nok: "Tiger Winters",
+          nok: "Tiger G",
           amount: "200000",
           lottery: "Bet9ja",
-          profile_image: "https://randomuser.me/api/portraits/women/6.jpg",
+          location: "Lagos",
+          status: "Claimed",
+          year_won: "2020",
+          year_claimed: "2020",
         },
         {
           id: "7",
           employee_name: "Herrod Chandler",
           dob: "02-04-1990",
           nin: "5998762356",
-          nok: "Tiger Winters",
+          nok: "Tiger F",
           amount: "200000",
           lottery: "Bet9ja",
-          profile_image: "https://randomuser.me/api/portraits/men/7.jpg",
+          location: "Kwara",
+          status: "Claimed",
+          year_won: "2020",
+          year_claimed: "2020",
         },
         {
           id: "8",
           employee_name: "Rhona Davidson",
           dob: "02-04-1990",
           nin: "55121124576",
-          nok: "Tiger Winters",
+          nok: "Tiger E",
           amount: "200000",
           lottery: "Bet9ja",
-          profile_image: "https://randomuser.me/api/portraits/women/8.jpg",
+          location: "Kwara",
+          status: "Claimed",
+          year_won: "2020",
+          year_claimed: "2020",
         },
         {
           id: "9",
           employee_name: "Colleen Hurst",
           dob: "02-04-1990",
           nin: "39977543234",
-          nok: "Tiger Winters",
+          nok: "Tiger D",
           amount: "200000",
           lottery: "Bet9ja",
-          profile_image: "https://randomuser.me/api/portraits/women/9.jpg",
+          location: "Kwara",
+          status: "Claimed",
+          year_won: "2020",
+          year_claimed: "2020",
         },
         {
           id: "10",
           employee_name: "Sonya Frost",
           dob: "02-04-1990",
           nin: "2309786542",
-          nok: "Tiger Winters",
+          nok: "Tiger C",
           amount: "200000",
           lottery: "Bet9ja",
-          profile_image: "https://randomuser.me/api/portraits/women/10.jpg",
+          location: "Kwara",
+          status: "Claimed",
+          year_won: "2020",
+          year_claimed: "2020",
         },
         {
           id: "11",
           employee_name: "Jena Gaines",
           dob: "02-04-1990",
           nin: "30123456867",
-          nok: "Tiger Winters",
+          nok: "Tiger B",
           amount: "200000",
           lottery: "Bet9ja",
-          profile_image: "https://randomuser.me/api/portraits/women/11.jpg",
+          location: "Kwara",
+          status: "Claimed",
+          year_won: "2020",
+          year_claimed: "2020",
         },
         {
           id: "12",
           employee_name: "Quinn Flynn",
           dob: "02-04-1990",
           nin: "22123456789",
-          nok: "Tiger Winters",
+          nok: "Tiger A",
           amount: "200000",
           lottery: "Bet9ja",
-          profile_image: "https://randomuser.me/api/portraits/men/12.jpg",
+          location: "Kwara",
+          status: "Claimed",
+          year_won: "2020",
+          year_claimed: "2020",
         },
       ];
     </script>
