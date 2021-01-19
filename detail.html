@@ -95,12 +95,13 @@
               <h4 class="name"><a href="#" x-text="item.employee_name"></a></h4>
               <p>NIN:<span class="draw-name" x-text="item.nin"></span></p>
               <p>DOB:<span class="draw-name" x-text="item.dob"></span></p>
-              <p>Won: <span class="amount" x-text="'N'+item.amount"></span></p>
+              <p>Won: <span class="amount" x-text="'USD'+item.amount"></span></p>
               <p>NOK: <span class="amount" x-text="item.nok"></span></p>
               <p>Lottery: <span class="amount" x-text="item.lottery"></span></p>
               <p>Claim status:<span class="amount" x-text="item.status"></span></p>
               <p>Year won:<span class="amount" x-text="item.year_won"></span></p>
               <p>Year claimed:<span class="amount" x-text="item.year_claimed"></span></p>
+              <p>Paid status:<span class="amount" x-text="item.paid"></span></p>
               <p>Location:<span class="amount" x-text="item.location"></span></p>
             </div>
           </div>
@@ -220,14 +221,15 @@
       var sourceData = [
         {
           id: "1",
-          employee_name: "Tiger Nixon",
+          employee_name: "Hannah James",
           dob: "02-04-1990",
           nin: "6112345778",
-          nok: "Tiger W",
-          amount: "200000",
+          nok: "Stamm R",
+          amount: "900,000",
           lottery: "Bet9ja",
           location: "Kwara",
           status: "Claimed",
+          paid: "Not Paid",
           year_won: "2020",
           year_claimed: "2020",
         },
@@ -241,6 +243,7 @@
           lottery: "Bet9ja",
           location: "Kaduna",
           status: "Claimed",
+          paid: "Not Paid",
           year_won: "2020",
           year_claimed: "2021",
         },
@@ -254,6 +257,7 @@
           lottery: "Bet9ja",
           location: "Oyo",
           status: "Claimed",
+          paid: "Not Paid",
           year_won: "2020",
           year_claimed: "2020",
         },
@@ -267,6 +271,7 @@
           lottery: "Bet9ja",
           location: "katsina",
           status: "Claimed",
+          paid: "Not Paid",
           year_won: "2020",
           year_claimed: "2020",
         },
@@ -280,6 +285,7 @@
           lottery: "Bet9ja",
           location: "Kano",
           status: "Claimed",
+          paid: "Not Paid",
           year_won: "2020",
           year_claimed: "2020",
         },
@@ -293,6 +299,7 @@
           lottery: "Bet9ja",
           location: "Lagos",
           status: "Claimed",
+          paid: "Not Paid",
           year_won: "2020",
           year_claimed: "2020",
         },
